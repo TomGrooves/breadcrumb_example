@@ -1,25 +1,26 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import {AppContextProvider} from './context/ContextProvider';
+import CountryPage from './components/countryPage/CountryPage';
+import CityPage from './components/cityPage/CityPage';
+import SingleRoomPage from './components/singleRoomPage/SingleRoomPage';
+import HotelPage from './components/hotelPage/HotelPage';
+import RoomPage from './components/roomPage/RoomPage';
+import BreadCrumb from './components/breadcrumb/breadcrumb';
+import style from './styles/style.module.scss';
 
 function App() {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <AppContextProvider>
+    <BreadCrumb/>
+    <section className={style.wrapper}>
+        <CountryPage/>
+        <CityPage />
+        <HotelPage />
+        <RoomPage />-
+        <SingleRoomPage/>
+    </section>
+    </AppContextProvider>
   );
 }
 

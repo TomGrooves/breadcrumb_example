@@ -1,3 +1,8 @@
+## Breadcrumb example
+
+All components subscribe to the ContextProvider which is responsible for fetching and storing data. 
+Whenever a user clicks the links, the fetch URL is changed and a re-fetch happens. This allows the use of a breadcrumb style menu, while also using conditional rendering.
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
